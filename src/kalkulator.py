@@ -1,3 +1,5 @@
+
+
 # AGDER TAXI
 # HVERDAGSTAKSTER
 
@@ -78,10 +80,18 @@ def agderPris(inputkm, inputtid, inputkmover, inputtillegg):
 
 
     print("5-8 Passasjerer")
-    print((inputkm * atHelgKmM) + (inputtid * atHelgTid) + (inputkmover * atHelgKmOverM) + inputtillegg, ",- kroner")
+    resultat = (inputkm * atHelgKmM) + (inputtid * atHelgTid) + (inputkmover * atHelgKmOverM) + atHelgStartM + inputtillegg
+    if resultat < atHelgMinstM:
+        resultat = atHelgMinstM
+    print("{},- kroner\n".format(int(resultat)))
+
     print("9-16 Passasjerer")
-    print((inputkm * atHelgKmL) + (inputtid * atHelgTid) + (inputkmover * atHelgKmOverL) + inputtillegg, ",- kroner")
-    print()
+
+    resultat = (inputkm * atHelgKmL) + (inputtid * atHelgTid) + (inputkmover * atHelgKmOverL) + atHelgStartL + inputtillegg
+    if resultat < atHelgMinstL:
+        resultat = atHelgMinstL
+    print("{},- kroner\n".format(int(resultat)))
+
     print("HELLIGDAGER")
     print("1-4 Passasjerer")
     print((inputkm * atHolyKmS) + (inputtid * atHolyTid) + inputtillegg, ",- kroner")
@@ -125,3 +135,5 @@ while True:
         print("FEIL: Unngå og tast inn noe annet enn tall.\n")
     except ZeroDivisionError:
         print("You cannot divide anything by 0!")
+
+
