@@ -24,6 +24,8 @@ def atHolyM(km, tid, over, tillegg):
 def atHolyL(km, tid, over, tillegg):
     return (km * at.HolyKmL) + (tid * at.HolyTid) + (over * at.HolyKmOverL) + tillegg + at.HolyStartL
 
+# VENNESLA
+
 def vtNormS(km, tid, tillegg):
     return (km * vt.NormKmS) + (tid * vt.NormTid) + tillegg + vt.NormStartS
 def vtNormM(km, tid, over, tillegg):
@@ -51,3 +53,41 @@ def vtHolyM(km, tid, over, tillegg):
     return (km * vt.HolyKmM) + (tid * vt.HolyTid) + (over * vt.HolyKmOverM) + tillegg + vt.HolyStartM
 def vtHolyL(km, tid, over, tillegg):
     return (km * vt.HolyKmL) + (tid * vt.HolyTid) + (over * vt.HolyKmOverL) + tillegg + vt.HolyStartL
+
+# MANDAL
+
+def mtDagS(km, tid, over, frem, tillegg):
+    return (km * mt.DagKmS) + (tid * mt.DagTid) + (over * mt.DagKmOverS) + (frem * mt.DagTilkS) + tillegg + \
+           mt.DagStartS
+def mtDagFremS(km, tid, over, frem, tillegg):
+    return (km * mt.DagKmS) + (tid * mt.DagTid) + (over * mt.DagKmOverS) + (frem * mt.DagTilkS) + tillegg + \
+           mt.DagFremS
+
+def mtKvelS(km, tid, over, frem, tillegg):
+    return (km * mt.KvelKmS) + (tid * mt.KvelTid) + (over * mt.KvelKmOverS) + (frem * mt.KvelTilkS) + tillegg + \
+           mt.KvelStartS
+def mtKvelFremS(km, tid, over, frem, tillegg):
+    return (km * mt.KvelKmS) + (tid * mt.KvelTid) + (over * mt.KvelKmOverS) + (frem * mt.KvelTilkS) + tillegg + \
+           mt.KvelFremS
+
+def mtLordS(km, tid, over, frem, tillegg):
+    return (km * mt.LordKmS) + (tid * mt.LordTid) + (over * mt.LordKmOverS) + (frem * mt.LordTilkS) + tillegg + \
+           mt.LordStartS
+def mtLordFremS(km, tid, over, frem, tillegg):
+    return (km * mt.LordKmS) + (tid * mt.LordTid) + (over * mt.LordKmOverS) + (frem * mt.LordTilkS) + tillegg + \
+           mt.LordFremS
+
+def mtHelgS(km, tid, over, frem, tillegg):
+    return (km * mt.HelgKmS) + (tid * mt.HelgTid) + (over * mt.HelgKmOverS) + (frem * mt.HelgTilkS) + tillegg + \
+           mt.HelgStartS
+def mtHelgFremS(km, tid, over, frem, tillegg):
+    return (km * mt.HelgKmS) + (tid * mt.HelgTid) + (over * mt.HelgKmOverS) + (frem * mt.HelgTilkS) + tillegg + \
+           mt.HelgFremS
+
+def mtHolyS(km, tid, over, frem, tillegg):
+    return (km * mt.HolyKmS) + (tid * mt.HolyTid) + (over * mt.HolyKmOverS) + (frem * mt.HolyTilkS) + tillegg + \
+           mt.HolyStartS
+def mtHolyFremS(km, tid, over, frem, tillegg):
+    return (km * mt.HolyKmS) + (tid * mt.HolyTid) + (over * mt.HolyKmOverS) + (frem * mt.HolyTilkS) + tillegg + \
+           mt.HolyFremS
+
