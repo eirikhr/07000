@@ -4,7 +4,10 @@ import mt
 
 
 def atNormS(km, tid, tillegg):
-    return (km * at.NormKmS) + (tid * at.NormTid) + tillegg + at.NormStartS
+    resultat = (km * at.NormKmS) + (tid * at.NormTid) + tillegg + at.NormStartS
+    if resultat < at.NormMinstS:
+        resultat = at.NormMinstS
+    return resultat
 def atNormM(km, tid, over, tillegg):
     return (km * at.NormKmM) + (tid * at.NormTid) + (over * at.NormKmOverM) + tillegg + at.NormStartM
 def atNormL(km, tid, over, tillegg):

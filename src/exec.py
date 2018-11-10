@@ -34,10 +34,30 @@ labelOver.grid(row=3, column=0)
 entryOver = tk.Entry(root, textvariable=idOver)
 entryOver.grid(row=3, column=1)
 
-buttonCal = tk.Button(root, text="Kalkulèr")
-buttonCal.grid(row=10, column=0)
+
+
 
 # Denne funker ikke enda!!!
-# labelResult1 = tk.Label(root, command=atNormS(int(idKm), int(idMin), int(idTillegg)))
+pidKm = idKm.get()
+pidMin = idMin.get()
+pidTillegg = idTillegg.get()
+
+
+
+# labelResult1 = tk.Label(root, command=print(atNormS(pidKm, pidMin, pidTillegg)))
+# print(labelResult1)
+
+def printPris(event):
+    pidKm = idKm.get()
+    pidMin = idMin.get()
+    pidTillegg = idTillegg.get()
+    print(atNormS(pidKm, pidMin, pidTillegg))
+
+
+buttonCal = tk.Button(root, text="Kalkulèr")
+buttonCal.bind("<Button-1>", printPris)
+buttonCal.grid(row=10, column=0)
+
+
 
 root.mainloop()
