@@ -3,7 +3,7 @@ from functions import *
 
 
 root = tk.Tk()
-root.geometry('400x200+100+200')
+root.geometry('500x1000+100+200')
 root.title('07000 Priskalkulator')
 
 idKm = tk.IntVar()
@@ -36,13 +36,13 @@ entryOver.grid(row=3, column=1)
 
 
 
-
+"""
 # Denne funker ikke enda!!!
 pidKm = idKm.get()
 pidMin = idMin.get()
 pidTillegg = idTillegg.get()
 
-
+"""
 
 # labelResult1 = tk.Label(root, command=print(atNormS(pidKm, pidMin, pidTillegg)))
 # print(labelResult1)
@@ -51,6 +51,7 @@ def printPris(event):
     pidKm = idKm.get()
     pidMin = idMin.get()
     pidTillegg = idTillegg.get()
+
     print(atNormS(pidKm, pidMin, pidTillegg))
 
 
