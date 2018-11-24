@@ -1,5 +1,7 @@
 # Mandal Taxi
 
+updatedate = 231118
+
 DagStartS = 47                # 1-4  Startpris
 DagStartM = 87                # 5-8  Startpris
 DagStartL = 137               # 9-16 Startpris

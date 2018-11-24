@@ -2,30 +2,94 @@ import at
 import vt
 import mt
 
+# TODO:
+# - Funksjonene til VT og MT. Se AT.
+# - Bussfunksjoner til MT er ikkeeksisterende p.t.
+
 
 def atNormS(km, tid, tillegg):
     resultat = (km * at.NormKmS) + (tid * at.NormTid) + tillegg + at.NormStartS
     if resultat < at.NormMinstS:
         resultat = at.NormMinstS
     return resultat
-def atNormM(km, tid, over, tillegg):
-    return (km * at.NormKmM) + (tid * at.NormTid) + (over * at.NormKmOverM) + tillegg + at.NormStartM
-def atNormL(km, tid, over, tillegg):
-    return (km * at.NormKmL) + (tid * at.NormTid) + (over * at.NormKmOverL) + tillegg + at.NormStartL
+
+def atNormM(km, tid, tillegg):
+    over = km - 30
+    resultat = (km * at.NormKmM) + (tid * at.NormTid) + tillegg + at.NormStartM
+    resultatlang = (30 * at.NormKmM) + (tid * at.NormTid) + (over * at.NormKmOverM) + tillegg + at.NormStartM
+    if resultatlang < resultat:
+        resultat = resultatlang
+    if resultat < at.NormMinstM:
+        resultat = at.NormMinstM
+    return resultat
+
+def atNormL(km, tid, tillegg):
+    over = km - 30
+    resultat = (km * at.NormKmL) + (tid * at.NormTid) + tillegg + at.NormStartL
+    resultatlang = (30 * at.NormKmL) + (tid * at.NormTid) + (over * at.NormKmOverL) + tillegg + at.NormStartL
+    if resultatlang < resultat:
+        resultat = resultatlang
+    if resultat < at.NormMinstL:
+        resultat = at.NormMinstL
+    return resultat
+
 
 def atHelgS(km, tid, tillegg):
-    return (km * at.HelgKmS) + (tid * at.HelgTid) + tillegg + at.HelgStartS
-def atHelgM(km, tid, over, tillegg):
-    return (km * at.HelgKmM) + (tid * at.HelgTid) + (over * at.HelgKmOverM) + tillegg + at.HelgStartM
-def atHelgL(km, tid, over, tillegg):
-    return (km * at.HelgKmL) + (tid * at.HelgTid) + (over * at.HelgKmOverL) + tillegg + at.HelgStartL
+    resultat = (km * at.HelgKmS) + (tid * at.HelgTid) + tillegg + at.HelgStartS
+    if resultat < at.HelgMinstS:
+        resultat = at.HelgMinstS
+    return resultat
+
+def atHelgM(km, tid, tillegg):
+    over = km - 30
+    resultat = (km * at.HelgKmM) + (tid * at.HelgTid) + tillegg + at.HelgStartM
+    resultatlang = (30 * at.HelgKmM) + (tid * at.HelgTid) + (over * at.HelgKmOverM) + tillegg + at.HelgStartM
+    if resultatlang < resultat:
+        resultat = resultatlang
+    if resultat < at.HelgMinstM:
+        resultat = at.HelgMinstM
+    return resultat
+
+def atHelgL(km, tid, tillegg):
+    over = km - 30
+    resultat = (km * at.HelgKmL) + (tid * at.HelgTid) + tillegg + at.HelgStartL
+    resultatlang = (30 * at.HelgKmL) + (tid * at.HelgTid) + (over * at.HelgKmOverL) + tillegg + at.HelgStartL
+    if resultatlang < resultat:
+        resultat = resultatlang
+    if resultat < at.HelgMinstL:
+        resultat = at.HelgMinstL
+    return resultat
+
 
 def atHolyS(km, tid, tillegg):
-    return (km * at.HolyKmS) + (tid * at.HolyTid) + tillegg + at.HolyStartS
-def atHolyM(km, tid, over, tillegg):
-    return (km * at.HolyKmM) + (tid * at.HolyTid) + (over * at.HolyKmOverM) + tillegg + at.HolyStartM
-def atHolyL(km, tid, over, tillegg):
-    return (km * at.HolyKmL) + (tid * at.HolyTid) + (over * at.HolyKmOverL) + tillegg + at.HolyStartL
+    resultat = (km * at.HolyKmS) + (tid * at.HolyTid) + tillegg + at.HolyStartS
+    if resultat < at.HolyMinstS:
+        resultat = at.HolyMinstS
+    return resultat
+
+
+
+def atHolyM(km, tid, tillegg):
+    over = km - 30
+    resultat = (km * at.HolyKmM) + (tid * at.HolyTid) + tillegg + at.HolyStartM
+    resultatlang = (30 * at.HolyKmM) + (tid * at.HolyTid) + (over * at.HolyKmOverM) + tillegg + at.HolyStartM
+    if resultatlang < resultat:
+        resultat = resultatlang
+    if resultat < at.HolyMinstM:
+        resultat = at.HolyMinstM
+    return resultat
+
+
+def atHolyL(km, tid, tillegg):
+    over = km - 30
+    resultat = (km * at.HolyKmL) + (tid * at.HolyTid) + tillegg + at.HolyStartL
+    resultatlang = (30 * at.HolyKmL) + (tid * at.HolyTid) + (over * at.HolyKmOverL) + tillegg + at.HolyStartL
+    if resultatlang < resultat:
+        resultat = resultatlang
+    if resultat < at.HolyMinstL:
+        resultat = at.HolyMinstL
+    return resultat
+
 
 # VENNESLA
 

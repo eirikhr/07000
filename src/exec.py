@@ -34,6 +34,14 @@ labelOver.grid(row=3, column=0)
 entryOver = tk.Entry(root, textvariable=idOver)
 entryOver.grid(row=3, column=1)
 
+pidKm = idKm.get()
+pidMin = idMin.get()
+pidTillegg = idTillegg.get()
+
+labelTest = tk.Label(root, text="Resultat-test")
+labelTest.grid(row=4, column=0)
+entryTest = tk.Entry(root, textvariable=atNormS(pidKm, pidMin, pidTillegg))
+entryTest.grid(row=4, column=1)
 
 
 """

@@ -1,6 +1,8 @@
 # VENNESLA TAXI
 # HVERDAGSTAKSTER
 
+updatedate = 231118
+
 NormStartS = 68                # 1-4  Startpris
 NormStartM = 103               # 5-8  Startpris 5-8
 NormStartL = 136               # 9-16 Startpris

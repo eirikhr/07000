@@ -1,11 +1,6 @@
-import tkinter as tk
+from functions import *
 
-top = tk.Tk()
-
-top.geometry('500x900+100+200')
-top.title('07000 Priskalkulator')
-
-
-
-top.mainloop()
-
+print("Minstepristest:")
+print(atHolyS(1, 1, 0), "\n")
+print("Kilometertest:")
+print(atHolyS(31, 0, 0))

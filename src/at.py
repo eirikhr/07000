@@ -1,6 +1,8 @@
 # AGDER TAXI
 # HVERDAGSTAKSTER
 
+updatedate = 231118
+
 NormStartS = 69                # 1-4  Startpris
 NormStartM = 104               # 5-8  Startpris 5-8
 NormStartL = 137               # 9-16 Startpris
