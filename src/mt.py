@@ -19,8 +19,8 @@ DagMinstS = 107               # 1-4  Minstepris
 DagMinstM = 159               # 5-8  Minstepris
 DagMinstL = 226               # 9-16 Minstepris
 DagTilkS = 17                 # 1-4  Tilkjøring per km over 10km fra sentralen.
-DagTilkM = 0                  # 5-8  Tilkjøring per km over 10km fra sentralen.
-DagTilkL = 0                  # 9-16 Tilkjøring per km over 10km fra sentralen.
+DagTilkM = 17                  # 5-8  Tilkjøring per km over 10km fra sentralen.
+DagTilkL = 17                  # 9-16 Tilkjøring per km over 10km fra sentralen.
 
 KvelStartS = 57                # 1-4  Startpris
 KvelStartM = 87                # 5-8  Startpris
@@ -39,8 +39,8 @@ KvelMinstS = 129               # 1-4  Minstepris
 KvelMinstM = 170               # 5-8  Minstepris
 KvelMinstL = 226               # 9-16 Minstepris
 KvelTilkS = 20.55              # 1-4  Tilkjøring per km over 10km fra sentralen.
-KvelTilkM = 0                  # 5-8  Tilkjøring per km over 10km fra sentralen.
-KvelTilkL = 0                  # 9-16 Tilkjøring per km over 10km fra sentralen.
+KvelTilkM = 20.55              # 5-8  Tilkjøring per km over 10km fra sentralen.
+KvelTilkL = 20.55              # 9-16 Tilkjøring per km over 10km fra sentralen.
 
 
 LordStartS = 61                # 1-4  Startpris
@@ -60,8 +60,8 @@ LordMinstS = 139               # 1-4  Minstepris
 LordMinstM = 170               # 5-8  Minstepris
 LordMinstL = 226               # 9-16 Minstepris
 LordTilkS = 22.1               # 1-4  Tilkjøring per km over 10km fra sentralen.
-LordTilkM = 0                  # 5-8  Tilkjøring per km over 10km fra sentralen.
-LordTilkL = 0                  # 9-16 Tilkjøring per km over 10km fra sentralen.
+LordTilkM = 22.1               # 5-8  Tilkjøring per km over 10km fra sentralen.
+LordTilkL = 22.1               # 9-16 Tilkjøring per km over 10km fra sentralen.
 
 
 HelgStartS = 63                # 1-4  Startpris
@@ -81,8 +81,8 @@ HelgMinstS = 144               # 1-4  Minstepris
 HelgMinstM = 170               # 5-8  Minstepris
 HelgMinstL = 226               # 9-16 Minstepris
 HelgTilkS = 22.95              # 1-4  Tilkjøring per km over 10km fra sentralen.
-HelgTilkM = 0                  # 5-8  Tilkjøring per km over 10km fra sentralen.
-HelgTilkL = 0                  # 9-16 Tilkjøring per km over 10km fra sentralen.
+HelgTilkM = 22.95              # 5-8  Tilkjøring per km over 10km fra sentralen.
+HelgTilkL = 22.95              # 9-16 Tilkjøring per km over 10km fra sentralen.
 
 
 HolyStartS = 68                # 1-4  Startpris
@@ -102,6 +102,6 @@ HolyMinstS = 155               # 1-4  Minstepris
 HolyMinstM = 170               # 5-8  Minstepris
 HolyMinstL = 226               # 9-16 Minstepris
 HolyTilkS = 24.65              # 1-4  Tilkjøring per km over 10km fra sentralen.
-HolyTilkM = 0                  # 5-8  Tilkjøring per km over 10km fra sentralen.
-HolyTilkL = 0                  # 9-16 Tilkjøring per km over 10km fra sentralen.
+HolyTilkM = 24.65              # 5-8  Tilkjøring per km over 10km fra sentralen.
+HolyTilkL = 24.65              # 9-16 Tilkjøring per km over 10km fra sentralen.
 
