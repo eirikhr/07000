@@ -1,6 +1,8 @@
 from tkinter import *
 from functions import *
 
+from src.functions import mtKvelFremL
+
 dateupdated = "23. November 2018"
 
 calculator = Tk()
@@ -238,7 +240,6 @@ class Application(Frame):
             self.resultatAtHolyS = int(atHolyS(self.inkm, self.inmin, self.intillegg))
             self.resultatAtHolyM = int(atHolyM(self.inkm, self.inmin, self.intillegg))
             self.resultatAtHolyL = int(atHolyL(self.inkm, self.inmin, self.intillegg))
-
             self.replaceAtNormS(self.resultatAtNormS)
             self.replaceAtNormM(self.resultatAtNormM)
             self.replaceAtNormL(self.resultatAtNormL)
@@ -248,7 +249,6 @@ class Application(Frame):
             self.replaceAtHolyS(self.resultatAtHolyS)
             self.replaceAtHolyM(self.resultatAtHolyM)
             self.replaceAtHolyL(self.resultatAtHolyL)
-
             self.resultatVtNormS = int(vtNormS(self.inkm, self.inmin, self.intillegg))
             self.resultatVtNormM = int(vtNormM(self.inkm, self.inmin, self.intillegg))
             self.resultatVtNormL = int(vtNormL(self.inkm, self.inmin, self.intillegg))
@@ -261,7 +261,6 @@ class Application(Frame):
             self.resultatVtHolyS = int(vtHolyS(self.inkm, self.inmin, self.intillegg))
             self.resultatVtHolyM = int(vtHolyM(self.inkm, self.inmin, self.intillegg))
             self.resultatVtHolyL = int(vtHolyL(self.inkm, self.inmin, self.intillegg))
-
             self.replaceVtNormS(self.resultatVtNormS)
             self.replaceVtNormM(self.resultatVtNormM)
             self.replaceVtNormL(self.resultatVtNormL)
@@ -274,7 +273,6 @@ class Application(Frame):
             self.replaceVtHolyS(self.resultatVtHolyS)
             self.replaceVtHolyM(self.resultatVtHolyM)
             self.replaceVtHolyL(self.resultatVtHolyL)
-
             self.resultatMtDagS = int(mtDagS(self.inkm, self.inmin, self.infrem, self.intillegg))
             self.resultatMtDagM = int(mtDagM(self.inkm, self.inmin, self.infrem, self.intillegg))
             self.resultatMtDagL = int(mtDagM(self.inkm, self.inmin, self.infrem, self.intillegg))
@@ -292,20 +290,19 @@ class Application(Frame):
             self.resultatMtHolyL = int(mtHolyM(self.inkm, self.inmin, self.infrem, self.intillegg))
             self.resultatMtDagFremS = int(mtDagFremS(self.inkm, self.inmin, self.infrem, self.intillegg))
             self.resultatMtDagFremM = int(mtDagFremM(self.inkm, self.inmin, self.infrem, self.intillegg))
-            self.resultatMtDagFremL = int(mtDagFremM(self.inkm, self.inmin, self.infrem, self.intillegg))
+            self.resultatMtDagFremL = int(mtDagFremL(self.inkm, self.inmin, self.infrem, self.intillegg))
             self.resultatMtKvelFremS = int(mtKvelFremS(self.inkm, self.inmin, self.infrem, self.intillegg))
             self.resultatMtKvelFremM = int(mtKvelFremM(self.inkm, self.inmin, self.infrem, self.intillegg))
-            self.resultatMtKvelFremL = int(mtKvelFremM(self.inkm, self.inmin, self.infrem, self.intillegg))
+            self.resultatMtKvelFremL = int(mtKvelFremL(self.inkm, self.inmin, self.infrem, self.intillegg))
             self.resultatMtLordFremS = int(mtLordFremS(self.inkm, self.inmin, self.infrem, self.intillegg))
             self.resultatMtLordFremM = int(mtLordFremM(self.inkm, self.inmin, self.infrem, self.intillegg))
-            self.resultatMtLordFremL = int(mtLordFremM(self.inkm, self.inmin, self.infrem, self.intillegg))
+            self.resultatMtLordFremL = int(mtLordFremL(self.inkm, self.inmin, self.infrem, self.intillegg))
             self.resultatMtHelgFremS = int(mtHelgFremS(self.inkm, self.inmin, self.infrem, self.intillegg))
             self.resultatMtHelgFremM = int(mtHelgFremM(self.inkm, self.inmin, self.infrem, self.intillegg))
-            self.resultatMtHelgFremL = int(mtHelgFremM(self.inkm, self.inmin, self.infrem, self.intillegg))
+            self.resultatMtHelgFremL = int(mtHelgFremL(self.inkm, self.inmin, self.infrem, self.intillegg))
             self.resultatMtHolyFremS = int(mtHolyFremS(self.inkm, self.inmin, self.infrem, self.intillegg))
             self.resultatMtHolyFremM = int(mtHolyFremM(self.inkm, self.inmin, self.infrem, self.intillegg))
-            self.resultatMtHolyFremL = int(mtHolyFremM(self.inkm, self.inmin, self.infrem, self.intillegg))
-
+            self.resultatMtHolyFremL = int(mtHolyFremL(self.inkm, self.inmin, self.infrem, self.intillegg))
             self.replaceMtDagS(self.resultatMtDagS)
             self.replaceMtDagM(self.resultatMtDagM)
             self.replaceMtDagL(self.resultatMtDagL)
@@ -336,12 +333,9 @@ class Application(Frame):
             self.replaceMtHolyFremS(self.resultatMtHolyFremS)
             self.replaceMtHolyFremM(self.resultatMtHolyFremM)
             self.replaceMtHolyFremL(self.resultatMtHolyFremL)
-
-
         except:
             messagebox.showinfo("Error", "Invalid input")
-
-
+            
 
     def createWidgets(self):
 

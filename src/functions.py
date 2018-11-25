@@ -484,8 +484,8 @@ def mtDagL(km, tid, frem, tillegg):
         return result
     else:
         result = mt.DagStartL + (km * mt.DagKmL) + (frem * mt.DagTilkL) + (tid * mt.DagTid) + tillegg
-        if result < mt.DagLinstL:
-            result = mt.DagLinstL
+        if result < mt.DagMinstL:
+            result = mt.DagMinstL
         return result
 
 
@@ -497,8 +497,8 @@ def mtDagFremL(km, tid, frem, tillegg):
         return result
     else:
         result = mt.DagFremL + (km * mt.DagKmL) + (frem * mt.DagTilkL) + (tid * mt.DagTid) + tillegg
-        if result < mt.DagLinstL:
-            result = mt.DagLinstL
+        if result < mt.DagMinstL:
+            result = mt.DagMinstL
         return result
 
 
@@ -510,8 +510,8 @@ def mtKvelL(km, tid, frem, tillegg):
         return result
     else:
         result = mt.KvelStartL + (km * mt.KvelKmL) + (frem * mt.KvelTilkL) + (tid * mt.KvelTid) + tillegg
-        if result < mt.KvelLinstL:
-            result = mt.KvelLinstL
+        if result < mt.KvelMinstL:
+            result = mt.KvelMinstL
         return result
 
 
@@ -523,8 +523,8 @@ def mtKvelFremL(km, tid, frem, tillegg):
         return result
     else:
         result = mt.KvelFremL + (km * mt.KvelKmL) + (frem * mt.KvelTilkL) + (tid * mt.KvelTid) + tillegg
-        if result < mt.KvelLinstL:
-            result = mt.KvelLinstL
+        if result < mt.KvelMinstL:
+            result = mt.KvelMinstL
         return result
 
 
@@ -536,8 +536,8 @@ def mtLordL(km, tid, frem, tillegg):
         return result
     else:
         result = mt.LordStartL + (km * mt.LordKmL) + (frem * mt.LordTilkL) + (tid * mt.LordTid) + tillegg
-        if result < mt.LordLinstL:
-            result = mt.LordLinstL
+        if result < mt.LordMinstL:
+            result = mt.LordMinstL
         return result
 
 
@@ -549,8 +549,8 @@ def mtLordFremL(km, tid, frem, tillegg):
         return result
     else:
         result = mt.LordFremL + (km * mt.LordKmL) + (frem * mt.LordTilkL) + (tid * mt.LordTid) + tillegg
-        if result < mt.LordLinstL:
-            result = mt.LordLinstL
+        if result < mt.LordMinstL:
+            result = mt.LordMinstL
         return result
 
 
@@ -562,8 +562,8 @@ def mtHelgL(km, tid, frem, tillegg):
         return result
     else:
         result = mt.HelgStartL + (km * mt.HelgKmL) + (frem * mt.HelgTilkL) + (tid * mt.HelgTid) + tillegg
-        if result < mt.HelgLinstL:
-            result = mt.HelgLinstL
+        if result < mt.HelgMinstL:
+            result = mt.HelgMinstL
         return result
 
 
@@ -575,8 +575,8 @@ def mtHelgFremL(km, tid, frem, tillegg):
         return result
     else:
         result = mt.HelgFremL + (km * mt.HelgKmL) + (frem * mt.HelgTilkL) + (tid * mt.HelgTid) + tillegg
-        if result < mt.HelgLinstL:
-            result = mt.HelgLinstL
+        if result < mt.HelgMinstL:
+            result = mt.HelgMinstL
         return result
 
 
@@ -588,8 +588,8 @@ def mtHolyL(km, tid, frem, tillegg):
         return result
     else:
         result = mt.HolyStartL + (km * mt.HolyKmL) + (frem * mt.HolyTilkL) + (tid * mt.HolyTid) + tillegg
-        if result < mt.HolyLinstL:
-            result = mt.HolyLinstL
+        if result < mt.HolyMinstL:
+            result = mt.HolyMinstL
         return result
 
 
@@ -601,7 +601,7 @@ def mtHolyFremL(km, tid, frem, tillegg):
         return result
     else:
         result = mt.HolyFremL + (km * mt.HolyKmL) + (frem * mt.HolyTilkL) + (tid * mt.HolyTid) + tillegg
-        if result < mt.HolyLinstL:
-            result = mt.HolyLinstL
+        if result < mt.HolyMinstL:
+            result = mt.HolyMinstL
         return result
 
