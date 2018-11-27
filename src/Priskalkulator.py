@@ -286,6 +286,7 @@ class Application(Frame):
             self.resultatMtHolyS = int(mtHolyS(self.inkm, self.inmin, self.infrem, self.intillegg))
             self.resultatMtHolyM = int(mtHolyM(self.inkm, self.inmin, self.infrem, self.intillegg))
             self.resultatMtHolyL = int(mtHolyL(self.inkm, self.inmin, self.infrem, self.intillegg))
+            """
             self.resultatMtDagFremS = int(mtDagFremS(self.inkm, self.inmin, self.infrem, self.intillegg))
             self.resultatMtDagFremM = int(mtDagFremM(self.inkm, self.inmin, self.infrem, self.intillegg))
             self.resultatMtDagFremL = int(mtDagFremL(self.inkm, self.inmin, self.infrem, self.intillegg))
@@ -301,6 +302,7 @@ class Application(Frame):
             self.resultatMtHolyFremS = int(mtHolyFremS(self.inkm, self.inmin, self.infrem, self.intillegg))
             self.resultatMtHolyFremM = int(mtHolyFremM(self.inkm, self.inmin, self.infrem, self.intillegg))
             self.resultatMtHolyFremL = int(mtHolyFremL(self.inkm, self.inmin, self.infrem, self.intillegg))
+            """
             self.replaceMtDagS(self.resultatMtDagS)
             self.replaceMtDagM(self.resultatMtDagM)
             self.replaceMtDagL(self.resultatMtDagL)
@@ -316,6 +318,7 @@ class Application(Frame):
             self.replaceMtHolyS(self.resultatMtHolyS)
             self.replaceMtHolyM(self.resultatMtHolyM)
             self.replaceMtHolyL(self.resultatMtHolyL)
+            """
             self.replaceMtDagFremS(self.resultatMtDagFremS)
             self.replaceMtDagFremM(self.resultatMtDagFremM)
             self.replaceMtDagFremL(self.resultatMtDagFremL)
@@ -331,6 +334,7 @@ class Application(Frame):
             self.replaceMtHolyFremS(self.resultatMtHolyFremS)
             self.replaceMtHolyFremM(self.resultatMtHolyFremM)
             self.replaceMtHolyFremL(self.resultatMtHolyFremL)
+            """
         except:
             messagebox.showinfo("Error", "Invalid input")
             
@@ -373,6 +377,59 @@ class Application(Frame):
         self.calculateButton.grid(row=10, column=0, columnspan=1, sticky="NWNESWSE")
         self.resetButton = Button(self, font=("verdana", 10), text="Nullstill", command=lambda: self.resetValues())
         self.resetButton.grid(row=10, column=1, columnspan=1, sticky="NWNESWSE")
+
+        # Guide
+
+        self.guideTextBox = LabelFrame(self, font=("Verdana", 10, "bold"), text="Bruksanvisning", relief=RIDGE)
+        self.guideTextBox.grid(row=4, rowspan=11, column=2, columnspan=15)
+
+        self.guideTidInfo = LabelFrame(self, font=("Verdana", 10, "bold"), text="Tidspunkt:", relief=RIDGE)
+        self.guideTidInfo.grid(row=15, column=7)
+
+        TidText = "AGDER TAXI:\n" \
+                    "Hverdag: Man-Fre 06-20\n" \
+                    "Kveld/Helg: Man-Tor 20-06\n" \
+                    "Kveld/Helg: Fre f.o.m 20 til 06 Man\n" \
+                    "Hellig: Påske- pinse-, jule- og nyttårsaften - høytid mellom 12-24.\n" \
+                    "Andre høytids- og bevegelige helligdager - høytid hele døgnet.\n\n" \
+                    \
+                    "VENNESLA TAXI:\n" \
+                    "Hverdag: Man-Fre 06-20\n" \
+                    "Kveld: Man-Tor 06-20\n" \
+                    "Kveld: Lør 06-18\n" \
+                    "Kveld: Søn f.o.m 06 til 06 Man" \
+                    "Helg: Fre-Lør 20-06\n" \
+                    "Helg: Lør-Søn 18-06\n" \
+                    "Hellig: Se Agder.\n\n" \
+                    "" \
+                    "MANDAL TAXI:\n" \
+                    "Hverdag: Man-Fre 06-18\n" \
+                    "Kveld: Man-Fre 18-24\n" \
+                    "Lørdag: Lør 06-15\n" \
+                    "Helg/Natt: Man-Fre 24-06\n" \
+                    "Helg/Natt: Lør kl 15 til Man kl 06\n" \
+                    "Hellig: Se Agder"
+
+
+        self.guideTextAgder = Label(self.guideTidInfo, font=("Verdana", 8), text=TidText, justify=LEFT)
+        self.guideTextAgder.grid(row=0, column=0)
+
+        self.guideAnnetInfo = LabelFrame(self.guideTextBox, font=("Verdana", 10, "bold"), relief=RIDGE)
+        self.guideAnnetInfo.grid(row=0, column=1)
+
+        AnnetText = "FREMKJØRING:\n" \
+                    "Gjelder kun Mandal. Ved tilkjøring ut over 10km fra nærmeste holdeplass\n" \
+                    "kan bilene ta betalt tilkjøringstakst per kilometer.\n" \
+                    "Eks: ved henting 13 kilometer fra nærmeste holdeplass\n" \
+                    "legges tallet 3 inn i kalkulatoren til venstre.\n\n" \
+                    "" \
+                    "DIVERSE TILLEGG:\n" \
+                    "Liste med de vanligste påslagene vil komme her etter hvert."
+
+        self.guideTextAnnet = Label(self.guideAnnetInfo, font=("Verdana", 8), text=AnnetText, justify=LEFT)
+        self.guideTextAnnet.grid(row=0, column=0)
+
+
 
         # Results
 
@@ -533,107 +590,8 @@ class Application(Frame):
 
         # Mandal Taxi
 
-        self.resultatMtTekst = LabelFrame(self, font=("Verdana", 10, "bold"), text="Mandal Taxi med Fremmøte", relief=RIDGE)
+        self.resultatMtTekst = LabelFrame(self, font=("Verdana", 10, "bold"), text="Mandal Taxi", relief=RIDGE)
         self.resultatMtTekst.grid(row=15, column=6, sticky="NWNESWSE")
-
-        self.textMtDagFremS = Label(self.resultatMtTekst, font=("verdana", 8), text="1-4 PAX | Hverdag")
-        self.textMtDagFremS.grid(row=1, column=2, sticky="W")
-        self.resMtDagFremS = Entry(self.resultatMtTekst, font=("Arial", 8), relief=RAISED, justify=RIGHT)
-        self.resMtDagFremS.insert(0, "0")
-        self.resMtDagFremS.grid(row=1, column=3, sticky="NWNESWSE")
-
-        self.textMtKvelFremS = Label(self.resultatMtTekst, font=("verdana", 8), fg="purple", text="1-4 PAX | Kveld")
-        self.textMtKvelFremS.grid(row=2, column=2, sticky="W")
-        self.resMtKvelFremS = Entry(self.resultatMtTekst, font=("Arial", 8), fg="purple", relief=RAISED, justify=RIGHT)
-        self.resMtKvelFremS.insert(0, "0")
-        self.resMtKvelFremS.grid(row=2, column=3, sticky="NWNESWSE")
-
-        self.textMtLordFremS = Label(self.resultatMtTekst, font=("verdana", 8), fg="blue", text="1-4 PAX | Lørdag")
-        self.textMtLordFremS.grid(row=3, column=2, sticky="W")
-        self.resMtLordFremS = Entry(self.resultatMtTekst, font=("Arial", 8), fg="blue", relief=RAISED, justify=RIGHT)
-        self.resMtLordFremS.insert(0, "0")
-        self.resMtLordFremS.grid(row=3, column=3, sticky="NWNESWSE")
-
-        self.textMtHelgFremS = Label(self.resultatMtTekst, font=("verdana", 8), fg="red", text="1-4 PAX | Helg/Natt")
-        self.textMtHelgFremS.grid(row=4, column=2, sticky="W")
-        self.resMtHelgFremS = Entry(self.resultatMtTekst, font=("Arial", 8), fg="red", relief=RAISED, justify=RIGHT)
-        self.resMtHelgFremS.insert(0, "0")
-        self.resMtHelgFremS.grid(row=4, column=3, sticky="NWNESWSE")
-
-        self.textMtHolyFremS = Label(self.resultatMtTekst, font=("verdana", 8), fg="gray", text="1-4 PAX | Hellig")
-        self.textMtHolyFremS.grid(row=5, column=2, sticky="W")
-        self.resMtHolyFremS = Entry(self.resultatMtTekst, font=("Arial", 8), fg="gray", relief=RAISED, justify=RIGHT)
-        self.resMtHolyFremS.insert(0, "0")
-        self.resMtHolyFremS.grid(row=5, column=3, sticky="NWNESWSE")
-
-        self.seperator96 = Label(self.resultatMtTekst, text="-----------")
-        self.seperator96.grid(row=6, column=0, columnspan=4)
-
-        self.textMtDagFremM = Label(self.resultatMtTekst, font=("verdana", 8), text="5-8 PAX | Hverdag")
-        self.textMtDagFremM.grid(row=7, column=2, sticky="W")
-        self.resMtDagFremM = Entry(self.resultatMtTekst, font=("Arial", 8), relief=RAISED, justify=RIGHT)
-        self.resMtDagFremM.insert(0, "0")
-        self.resMtDagFremM.grid(row=7, column=3, sticky="NWNESWSE")
-
-        self.textMtKvelFremM = Label(self.resultatMtTekst, font=("verdana", 8), fg="purple", text="5-8 PAX | Kveld")
-        self.textMtKvelFremM.grid(row=8, column=2, sticky="W")
-        self.resMtKvelFremM = Entry(self.resultatMtTekst, font=("Arial", 8), fg="purple", relief=RAISED, justify=RIGHT)
-        self.resMtKvelFremM.insert(0, "0")
-        self.resMtKvelFremM.grid(row=8, column=3, sticky="NWNESWSE")
-
-        self.textMtLordFremM = Label(self.resultatMtTekst, font=("verdana", 8), fg="blue", text="5-8 PAX | Lørdag")
-        self.textMtLordFremM.grid(row=9, column=2, sticky="W")
-        self.resMtLordFremM = Entry(self.resultatMtTekst, font=("Arial", 8), fg="blue", relief=RAISED, justify=RIGHT)
-        self.resMtLordFremM.insert(0, "0")
-        self.resMtLordFremM.grid(row=9, column=3, sticky="NWNESWSE")
-
-        self.textMtHelgFremM = Label(self.resultatMtTekst, font=("verdana", 8), fg="red", text="5-8 PAX | Helg/Natt")
-        self.textMtHelgFremM.grid(row=10, column=2, sticky="W")
-        self.resMtHelgFremM = Entry(self.resultatMtTekst, font=("Arial", 8), fg="red", relief=RAISED, justify=RIGHT)
-        self.resMtHelgFremM.insert(0, "0")
-        self.resMtHelgFremM.grid(row=10, column=3, sticky="NWNESWSE")
-
-        self.textMtHolyFremM = Label(self.resultatMtTekst, font=("verdana", 8), fg="gray", text="5-8 PAX | Hellig")
-        self.textMtHolyFremM.grid(row=11, column=2, sticky="W")
-        self.resMtHolyFremM = Entry(self.resultatMtTekst, font=("Arial", 8), fg="gray", relief=RAISED, justify=RIGHT)
-        self.resMtHolyFremM.insert(0, "0")
-        self.resMtHolyFremM.grid(row=11, column=3, sticky="NWNESWSE")
-
-        self.seperator14 = Label(self.resultatMtTekst, text="-----------")
-        self.seperator14.grid(row=12, column=0, columnspan=154)
-
-        self.textMtDagFremL = Label(self.resultatMtTekst, font=("verdana", 8), text="9-16 PAX | Hverdag")
-        self.textMtDagFremL.grid(row=13, column=2, sticky="W")
-        self.resMtDagFremL = Entry(self.resultatMtTekst, font=("Arial", 8), relief=RAISED, justify=RIGHT)
-        self.resMtDagFremL.insert(0, "0")
-        self.resMtDagFremL.grid(row=13, column=3, sticky="NWNESWSE")
-
-        self.textMtKvelFremL = Label(self.resultatMtTekst, font=("verdana", 8), fg="purple", text="9-16 PAX | Kveld")
-        self.textMtKvelFremL.grid(row=14, column=2, sticky="W")
-        self.resMtKvelFremL = Entry(self.resultatMtTekst, font=("Arial", 8), fg="purple", relief=RAISED, justify=RIGHT)
-        self.resMtKvelFremL.insert(0, "0")
-        self.resMtKvelFremL.grid(row=14, column=3, sticky="NWNESWSE")
-
-        self.textMtLordFremL = Label(self.resultatMtTekst, font=("verdana", 8), fg="blue", text="9-16 PAX | Lørdag")
-        self.textMtLordFremL.grid(row=15, column=2, sticky="W")
-        self.resMtLordFremL = Entry(self.resultatMtTekst, font=("Arial", 8), fg="blue", relief=RAISED, justify=RIGHT)
-        self.resMtLordFremL.insert(0, "0")
-        self.resMtLordFremL.grid(row=15, column=3, sticky="NWNESWSE")
-
-        self.textMtHelgFremL = Label(self.resultatMtTekst, font=("verdana", 8), fg="red", text="9-16 PAX | Helg/Natt")
-        self.textMtHelgFremL.grid(row=16, column=2, sticky="W")
-        self.resMtHelgFremL = Entry(self.resultatMtTekst, font=("Arial", 8), fg="red", relief=RAISED, justify=RIGHT)
-        self.resMtHelgFremL.insert(0, "0")
-        self.resMtHelgFremL.grid(row=16, column=3, sticky="NWNESWSE")
-
-        self.textMtHolyFremL = Label(self.resultatMtTekst, font=("verdana", 8), fg="gray", text="9-16 PAX | Hellig")
-        self.textMtHolyFremL.grid(row=17, column=2, sticky="W")
-        self.resMtHolyFremL = Entry(self.resultatMtTekst, font=("Arial", 8), fg="gray", relief=RAISED, justify=RIGHT)
-        self.resMtHolyFremL.insert(0, "0")
-        self.resMtHolyFremL.grid(row=17, column=3, sticky="NWNESWSE")
-
-        self.resultatMtTekst = LabelFrame(self, font=("Verdana", 10, "bold"), text="Mandal Taxi Plasstur", relief=RIDGE)
-        self.resultatMtTekst.grid(row=15, column=7, sticky="NWNESWSE")
 
         self.textMtDagS = Label(self.resultatMtTekst, font=("verdana", 8), text="1-4 PAX | Hverdag")
         self.textMtDagS.grid(row=1, column=2, sticky="W")
@@ -730,6 +688,109 @@ class Application(Frame):
         self.resMtHolyL = Entry(self.resultatMtTekst, font=("Arial", 8), fg="gray", relief=RAISED, justify=RIGHT)
         self.resMtHolyL.insert(0, "0")
         self.resMtHolyL.grid(row=17, column=3, sticky="NWNESWSE")
+
+        """
+
+                self.resultatMtTekst = LabelFrame(self, font=("Verdana", 10, "bold"), text="Mandal Taxi med Fremmøte", relief=RIDGE)
+                self.resultatMtTekst.grid(row=15, column=7, sticky="NWNESWSE")
+
+                self.textMtDagFremS = Label(self.resultatMtTekst, font=("verdana", 8), text="1-4 PAX | Hverdag")
+                self.textMtDagFremS.grid(row=1, column=2, sticky="W")
+                self.resMtDagFremS = Entry(self.resultatMtTekst, font=("Arial", 8), relief=RAISED, justify=RIGHT)
+                self.resMtDagFremS.insert(0, "0")
+                self.resMtDagFremS.grid(row=1, column=3, sticky="NWNESWSE")
+
+                self.textMtKvelFremS = Label(self.resultatMtTekst, font=("verdana", 8), fg="purple", text="1-4 PAX | Kveld")
+                self.textMtKvelFremS.grid(row=2, column=2, sticky="W")
+                self.resMtKvelFremS = Entry(self.resultatMtTekst, font=("Arial", 8), fg="purple", relief=RAISED, justify=RIGHT)
+                self.resMtKvelFremS.insert(0, "0")
+                self.resMtKvelFremS.grid(row=2, column=3, sticky="NWNESWSE")
+
+                self.textMtLordFremS = Label(self.resultatMtTekst, font=("verdana", 8), fg="blue", text="1-4 PAX | Lørdag")
+                self.textMtLordFremS.grid(row=3, column=2, sticky="W")
+                self.resMtLordFremS = Entry(self.resultatMtTekst, font=("Arial", 8), fg="blue", relief=RAISED, justify=RIGHT)
+                self.resMtLordFremS.insert(0, "0")
+                self.resMtLordFremS.grid(row=3, column=3, sticky="NWNESWSE")
+
+                self.textMtHelgFremS = Label(self.resultatMtTekst, font=("verdana", 8), fg="red", text="1-4 PAX | Helg/Natt")
+                self.textMtHelgFremS.grid(row=4, column=2, sticky="W")
+                self.resMtHelgFremS = Entry(self.resultatMtTekst, font=("Arial", 8), fg="red", relief=RAISED, justify=RIGHT)
+                self.resMtHelgFremS.insert(0, "0")
+                self.resMtHelgFremS.grid(row=4, column=3, sticky="NWNESWSE")
+
+                self.textMtHolyFremS = Label(self.resultatMtTekst, font=("verdana", 8), fg="gray", text="1-4 PAX | Hellig")
+                self.textMtHolyFremS.grid(row=5, column=2, sticky="W")
+                self.resMtHolyFremS = Entry(self.resultatMtTekst, font=("Arial", 8), fg="gray", relief=RAISED, justify=RIGHT)
+                self.resMtHolyFremS.insert(0, "0")
+                self.resMtHolyFremS.grid(row=5, column=3, sticky="NWNESWSE")
+
+                self.seperator96 = Label(self.resultatMtTekst, text="-----------")
+                self.seperator96.grid(row=6, column=0, columnspan=4)
+
+                self.textMtDagFremM = Label(self.resultatMtTekst, font=("verdana", 8), text="5-8 PAX | Hverdag")
+                self.textMtDagFremM.grid(row=7, column=2, sticky="W")
+                self.resMtDagFremM = Entry(self.resultatMtTekst, font=("Arial", 8), relief=RAISED, justify=RIGHT)
+                self.resMtDagFremM.insert(0, "0")
+                self.resMtDagFremM.grid(row=7, column=3, sticky="NWNESWSE")
+
+                self.textMtKvelFremM = Label(self.resultatMtTekst, font=("verdana", 8), fg="purple", text="5-8 PAX | Kveld")
+                self.textMtKvelFremM.grid(row=8, column=2, sticky="W")
+                self.resMtKvelFremM = Entry(self.resultatMtTekst, font=("Arial", 8), fg="purple", relief=RAISED, justify=RIGHT)
+                self.resMtKvelFremM.insert(0, "0")
+                self.resMtKvelFremM.grid(row=8, column=3, sticky="NWNESWSE")
+
+                self.textMtLordFremM = Label(self.resultatMtTekst, font=("verdana", 8), fg="blue", text="5-8 PAX | Lørdag")
+                self.textMtLordFremM.grid(row=9, column=2, sticky="W")
+                self.resMtLordFremM = Entry(self.resultatMtTekst, font=("Arial", 8), fg="blue", relief=RAISED, justify=RIGHT)
+                self.resMtLordFremM.insert(0, "0")
+                self.resMtLordFremM.grid(row=9, column=3, sticky="NWNESWSE")
+
+                self.textMtHelgFremM = Label(self.resultatMtTekst, font=("verdana", 8), fg="red", text="5-8 PAX | Helg/Natt")
+                self.textMtHelgFremM.grid(row=10, column=2, sticky="W")
+                self.resMtHelgFremM = Entry(self.resultatMtTekst, font=("Arial", 8), fg="red", relief=RAISED, justify=RIGHT)
+                self.resMtHelgFremM.insert(0, "0")
+                self.resMtHelgFremM.grid(row=10, column=3, sticky="NWNESWSE")
+
+                self.textMtHolyFremM = Label(self.resultatMtTekst, font=("verdana", 8), fg="gray", text="5-8 PAX | Hellig")
+                self.textMtHolyFremM.grid(row=11, column=2, sticky="W")
+                self.resMtHolyFremM = Entry(self.resultatMtTekst, font=("Arial", 8), fg="gray", relief=RAISED, justify=RIGHT)
+                self.resMtHolyFremM.insert(0, "0")
+                self.resMtHolyFremM.grid(row=11, column=3, sticky="NWNESWSE")
+
+                self.seperator14 = Label(self.resultatMtTekst, text="-----------")
+                self.seperator14.grid(row=12, column=0, columnspan=154)
+
+                self.textMtDagFremL = Label(self.resultatMtTekst, font=("verdana", 8), text="9-16 PAX | Hverdag")
+                self.textMtDagFremL.grid(row=13, column=2, sticky="W")
+                self.resMtDagFremL = Entry(self.resultatMtTekst, font=("Arial", 8), relief=RAISED, justify=RIGHT)
+                self.resMtDagFremL.insert(0, "0")
+                self.resMtDagFremL.grid(row=13, column=3, sticky="NWNESWSE")
+
+                self.textMtKvelFremL = Label(self.resultatMtTekst, font=("verdana", 8), fg="purple", text="9-16 PAX | Kveld")
+                self.textMtKvelFremL.grid(row=14, column=2, sticky="W")
+                self.resMtKvelFremL = Entry(self.resultatMtTekst, font=("Arial", 8), fg="purple", relief=RAISED, justify=RIGHT)
+                self.resMtKvelFremL.insert(0, "0")
+                self.resMtKvelFremL.grid(row=14, column=3, sticky="NWNESWSE")
+
+                self.textMtLordFremL = Label(self.resultatMtTekst, font=("verdana", 8), fg="blue", text="9-16 PAX | Lørdag")
+                self.textMtLordFremL.grid(row=15, column=2, sticky="W")
+                self.resMtLordFremL = Entry(self.resultatMtTekst, font=("Arial", 8), fg="blue", relief=RAISED, justify=RIGHT)
+                self.resMtLordFremL.insert(0, "0")
+                self.resMtLordFremL.grid(row=15, column=3, sticky="NWNESWSE")
+
+                self.textMtHelgFremL = Label(self.resultatMtTekst, font=("verdana", 8), fg="red", text="9-16 PAX | Helg/Natt")
+                self.textMtHelgFremL.grid(row=16, column=2, sticky="W")
+                self.resMtHelgFremL = Entry(self.resultatMtTekst, font=("Arial", 8), fg="red", relief=RAISED, justify=RIGHT)
+                self.resMtHelgFremL.insert(0, "0")
+                self.resMtHelgFremL.grid(row=16, column=3, sticky="NWNESWSE")
+
+                self.textMtHolyFremL = Label(self.resultatMtTekst, font=("verdana", 8), fg="gray", text="9-16 PAX | Hellig")
+                self.textMtHolyFremL.grid(row=17, column=2, sticky="W")
+                self.resMtHolyFremL = Entry(self.resultatMtTekst, font=("Arial", 8), fg="gray", relief=RAISED, justify=RIGHT)
+                self.resMtHolyFremL.insert(0, "0")
+                self.resMtHolyFremL.grid(row=17, column=3, sticky="NWNESWSE")
+
+                """
 
 
 app = Application(calculator).grid()
