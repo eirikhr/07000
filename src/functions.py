@@ -2,11 +2,6 @@ import at
 import vt
 import mt
 
-# TODO:
-# - Funksjonene til VT og MT. Se AT.
-# - Bussfunksjoner til MT er ikkeeksisterende p.t.
-
-
 def atNormS(km, tid, tillegg):
     resultat = (km * at.NormKmS) + (tid * at.NormTid) + tillegg + at.NormStartS
     if resultat < at.NormMinstS:

@@ -1,8 +1,6 @@
 from tkinter import *
 from functions import *
 
-from src.functions import mtKvelFremL
-
 dateupdated = "23. November 2018"
 
 calculator = Tk()
@@ -275,19 +273,19 @@ class Application(Frame):
             self.replaceVtHolyL(self.resultatVtHolyL)
             self.resultatMtDagS = int(mtDagS(self.inkm, self.inmin, self.infrem, self.intillegg))
             self.resultatMtDagM = int(mtDagM(self.inkm, self.inmin, self.infrem, self.intillegg))
-            self.resultatMtDagL = int(mtDagM(self.inkm, self.inmin, self.infrem, self.intillegg))
+            self.resultatMtDagL = int(mtDagL(self.inkm, self.inmin, self.infrem, self.intillegg))
             self.resultatMtKvelS = int(mtKvelS(self.inkm, self.inmin, self.infrem, self.intillegg))
             self.resultatMtKvelM = int(mtKvelM(self.inkm, self.inmin, self.infrem, self.intillegg))
-            self.resultatMtKvelL = int(mtKvelM(self.inkm, self.inmin, self.infrem, self.intillegg))
+            self.resultatMtKvelL = int(mtKvelL(self.inkm, self.inmin, self.infrem, self.intillegg))
             self.resultatMtLordS = int(mtLordS(self.inkm, self.inmin, self.infrem, self.intillegg))
             self.resultatMtLordM = int(mtLordM(self.inkm, self.inmin, self.infrem, self.intillegg))
-            self.resultatMtLordL = int(mtLordM(self.inkm, self.inmin, self.infrem, self.intillegg))
+            self.resultatMtLordL = int(mtLordL(self.inkm, self.inmin, self.infrem, self.intillegg))
             self.resultatMtHelgS = int(mtHelgS(self.inkm, self.inmin, self.infrem, self.intillegg))
             self.resultatMtHelgM = int(mtHelgM(self.inkm, self.inmin, self.infrem, self.intillegg))
-            self.resultatMtHelgL = int(mtHelgM(self.inkm, self.inmin, self.infrem, self.intillegg))
+            self.resultatMtHelgL = int(mtHelgL(self.inkm, self.inmin, self.infrem, self.intillegg))
             self.resultatMtHolyS = int(mtHolyS(self.inkm, self.inmin, self.infrem, self.intillegg))
             self.resultatMtHolyM = int(mtHolyM(self.inkm, self.inmin, self.infrem, self.intillegg))
-            self.resultatMtHolyL = int(mtHolyM(self.inkm, self.inmin, self.infrem, self.intillegg))
+            self.resultatMtHolyL = int(mtHolyL(self.inkm, self.inmin, self.infrem, self.intillegg))
             self.resultatMtDagFremS = int(mtDagFremS(self.inkm, self.inmin, self.infrem, self.intillegg))
             self.resultatMtDagFremM = int(mtDagFremM(self.inkm, self.inmin, self.infrem, self.intillegg))
             self.resultatMtDagFremL = int(mtDagFremL(self.inkm, self.inmin, self.infrem, self.intillegg))
