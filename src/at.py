@@ -1,47 +1,52 @@
 # AGDER TAXI
 # HVERDAGSTAKSTER
 
-updatedate = 231118
+"""
+Changelog
 
-NormStartS = 69                # 1-4  Startpris
-NormStartM = 104               # 5-8  Startpris 5-8
-NormStartL = 137               # 9-16 Startpris
-NormKmS = 13.65                # 1-4  Kroner per kilometer
-NormKmM = 24.1                 # 5-8  Kroner per kilometer
-NormKmL = 34.6                 # 9-16 Kroner per kilometer
-NormKmOverM = 19.5             # 5-8  Kroner per kilometer over 30km
-NormKmOverL = 27.7             # 9-16 Kroner per kilometer over 30km
-NormTid = 7.85                 # Minuttpris
-NormMinstS = 114               # 1-4  Minstepris
-NormMinstM = 170               # 5-8  Minstepris
-NormMinstL = 226               # 9-16 Minstepris
+8. Januar: Lagt til ordinærpriser fra 2019.
+"""
+
+
+NormStartS = 71                # 1-4  Startpris
+NormStartM = 107               # 5-8  Startpris 5-8
+NormStartL = 142               # 9-16 Startpris
+NormKmS = 14.1                # 1-4  Kroner per kilometer
+NormKmM = 24.9                 # 5-8  Kroner per kilometer
+NormKmL = 35.8                 # 9-16 Kroner per kilometer
+NormKmOverM = 20.15             # 5-8  Kroner per kilometer over 30km
+NormKmOverL = 28.65             # 9-16 Kroner per kilometer over 30km
+NormTid = 8.1                 # Minuttpris
+NormMinstS = 118               # 1-4  Minstepris
+NormMinstM = 176               # 5-8  Minstepris
+NormMinstL = 234               # 9-16 Minstepris
 
 # KVELD OG HELGETAKSTER
 
-HelgStartS = 90                # 1-4  Startpris
-HelgStartM = 135               # 5-8  Startpris 5-8
-HelgStartL = 178               # 9-16 Startpris
-HelgKmS = 17.75                # 1-4  Kroner per kilometer
-HelgKmM = 31.35                # 5-8  Kroner per kilometer
-HelgKmL = 44.95                # 9-16 Kroner per kilometer
-HelgKmOverM = 25.35            # 5-8  Kroner per kilometer over 30km
-HelgKmOverL = 36               # 9-16 Kroner per kilometer over 30km
-HelgTid = 10.2                 # Minuttpris
-HelgMinstS = 148               # 1-4  Minstepris
-HelgMinstM = 221               # 5-8  Minstepris
-HelgMinstL = 294               # 9-16 Minstepris
+HelgStartS = 92                # 1-4  Startpris
+HelgStartM = 139               # 5-8  Startpris 5-8
+HelgStartL = 185               # 9-16 Startpris
+HelgKmS = 18.35                # 1-4  Kroner per kilometer
+HelgKmM = 32.35                # 5-8  Kroner per kilometer
+HelgKmL = 46.55                # 9-16 Kroner per kilometer
+HelgKmOverM = 26.2            # 5-8  Kroner per kilometer over 30km
+HelgKmOverL = 37.25               # 9-16 Kroner per kilometer over 30km
+HelgTid = 10.55                 # Minuttpris
+HelgMinstS = 153               # 1-4  Minstepris
+HelgMinstM = 229               # 5-8  Minstepris
+HelgMinstL = 304               # 9-16 Minstepris
 
 # HELLIGTAKSTER
 
-HolyStartS = 104               # 1-4  Startpris
-HolyStartM = 156               # 5-8  Startpris 5-8
-HolyStartL = 206               # 9-16 Startpris
-HolyKmS = 20.45                # 1-4  Kroner per kilometer
-HolyKmM = 36.15                # 5-8  Kroner per kilometer
-HolyKmL = 51.9                 # 9-16 Kroner per kilometer
-HolyKmOverM = 29.25            # 5-8  Kroner per kilometer over 30km
-HolyKmOverL = 41.55            # 9-16 Kroner per kilometer over 30km
-HolyTid = 11.75                # Minuttpris
-HolyMinstS = 171               # 1-4  Minstepris
-HolyMinstM = 255               # 5-8  Minstepris
-HolyMinstL = 339               # 9-16 Minstepris
+HolyStartS = 107               # 1-4  Startpris
+HolyStartM = 161               # 5-8  Startpris 5-8
+HolyStartL = 213               # 9-16 Startpris
+HolyKmS = 21.15                # 1-4  Kroner per kilometer
+HolyKmM = 37.35                # 5-8  Kroner per kilometer
+HolyKmL = 53.7                 # 9-16 Kroner per kilometer
+HolyKmOverM = 30.25            # 5-8  Kroner per kilometer over 30km
+HolyKmOverL = 43                # 9-16 Kroner per kilometer over 30km
+HolyTid = 12.15                # Minuttpris
+HolyMinstS = 177               # 1-4  Minstepris
+HolyMinstM = 264               # 5-8  Minstepris
+HolyMinstL = 351               # 9-16 Minstepris

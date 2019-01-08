@@ -1,7 +1,7 @@
 from tkinter import *
 from functions import *
 
-dateupdated = "23. November 2018"
+dateupdated = "08. Januar 2019 (Ordinære 2019 takster for AT og VT)"
 
 calculator = Tk()
 calculator.title("07000 Priskalkulator - Priser oppdatert: {}".format(dateupdated))
@@ -397,7 +397,7 @@ class Application(Frame):
                     "Hverdag: Man-Fre 06-20\n" \
                     "Kveld: Man-Tor 06-20\n" \
                     "Kveld: Lør 06-18\n" \
-                    "Kveld: Søn f.o.m 06 til 06 Man" \
+                    "Kveld: Søn f.o.m 06 til 06 Man\n" \
                     "Helg: Fre-Lør 20-06\n" \
                     "Helg: Lør-Søn 18-06\n" \
                     "Hellig: Se Agder.\n\n" \
@@ -424,7 +424,8 @@ class Application(Frame):
                     "legges tallet 3 inn i kalkulatoren til venstre.\n\n" \
                     "" \
                     "DIVERSE TILLEGG:\n" \
-                    "Liste med de vanligste påslagene vil komme her etter hvert."
+                    "Agder Taxi: Sykkeltillegg - 80,- kr.\n" \
+                    "Agder Taxi: Rullestoltillegg - 131,- kr.\n"
 
         self.guideTextAnnet = Label(self.guideAnnetInfo, font=("Verdana", 8), text=AnnetText, justify=LEFT)
         self.guideTextAnnet.grid(row=0, column=0)
