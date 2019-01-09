@@ -7,6 +7,8 @@ calculator = Tk()
 calculator.title(
     "07000 Priskalkulator - Priser oppdatert: {}".format(dateupdated))
 calculator.resizable(0, 0)
+img = PhotoImage(file='kalk.png')
+calculator.tk.call('wm', 'iconphoto', calculator._w, img)
 
 
 class Application(Frame):
