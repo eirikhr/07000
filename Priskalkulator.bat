@@ -1,0 +1,1 @@
+python \\atdc\Arkiv\Priskalkulator\07000\src\Priskalkulator.py
